@@ -1,100 +1,393 @@
-<section id="about">
-	<p> </p>
-	<div class="row about-how">
-		<h1 class="intro-header">Zekais-Api</h1>
-		<h4 style="text-align: center;">Hello <%= username %>, Your Apikey : <%= apikey %></h4>
-	</div>
-	<div class="row justify-content-center">
-		<h4>Docs Page</h4>
-		<div class="col-twelve"  style="font-size: 16px;">
-			<div class="plan-block" data-aos="fade-up">
-				<div style="overflow-x:auto !important;">
-					<table class="table mb-0" style="width: 100% !important;">
-						<thead class="text-primary">
-							<tr>
-								<th scope="col">API NAME</th>
-								<th scope="col">PARAMETER</th>
-								<th scope="col">INFORMATION</th>
-								<th scope="col">ACTION</th>
-							</tr>
-						</thead>
-						<tbody style="text-align: center !important;">
-							<tr>
-								<td>Youtube Mp3</td>
-								<td>url & apikey</td>
-								<td>Youtube Audio Downloader</td>
-								<td>
-									<a target="__blank" href="/api/ytmp3?url=https://www.youtube.com/watch?v=9JS47BC0WXc&apikey=<%= apikey %>" class="button button-primary cta">Try</a>
-								</td>
-							</tr>
-							<tr>
-								<td>Youtube Mp4</td>
-								<td>url & apikey</td>
-								<td>Youtube Video Downloader</td>
-								<td>
-									<a target="__blank" href="/api/ytmp4?url=https://www.youtube.com/watch?v=9JS47BC0WXc&apikey=<%= apikey %>" class="button button-primary cta">Try</a>
-								</td>
-							</tr>
-							<tr>
-								<td>Youtube Play</td>
-								<td>query & apikey</td>
-								<td>Youtube Audio Downloader</td>
-								<td>
-									<a target="__blank" href="/api/ytplay?query=alone&apikey=<%= apikey %>" class="button button-primary cta">Try</a>
-								</td>
-							</tr>
-							<tr>
-								<td>Cak Lontong</td>
-								<td>apikey</td>
-								<td>Cak Lontong</td>
-								<td>
-									<a class="button button-primary" target="__blank" href="/api/caklontong?apikey=<%= apikey %>">Try</a>
-								</td>
-							</tr>
-							<tr>
-								<td>Quotes</td>
-								<td>apikey</td>
-								<td>Random Quotes</td>
-								<td>
-									<a class="button button-primary" target="__blank" href="/api/quotes?apikey=<%= apikey %>">Try</a>
-								</td>
-							</tr>
-							<tr>
-								<td>Bijak</td>
-								<td>apikey</td>
-								<td>Random Bijak</td>
-								<td>
-									<a class="button button-primary" target="__blank" href="/api/bijak?apikey=<%= apikey %>">Try</a>
-								</td>
-							</tr>
-							<tr>
-								<td>Fakta</td>
-								<td>apikey</td>
-								<td>Random Fakta</td>
-								<td>
-									<a class="button button-primary" target="__blank" href="/api/fakta?apikey=<%= apikey %>">Try</a>
-								</td>
-							</tr>
-							<tr>
-								<td>Motivasi</td>
-								<td>apikey</td>
-								<td>Random Motivasi</td>
-								<td>
-									<a class="button button-primary" target="__blank" href="/api/motivasi?apikey=<%= apikey %>">Try</a>
-								</td>
-							</tr>
-							<tr>
-								<td>Penyegar Timeline</td>
-								<td>apikey</td>
-								<td>Random Penyegar Timeline</td>
-								<td>
-									<a class="button button-primary" target="__blank" href="/api/ptl?apikey=<%= apikey %>">Try</a>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-			</div>
-		</div> 
-	</div> 
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Zekais-API</title>
+    <meta name="description"content="Zekais"/>
+    <link rel="icon" href="https://i.postimg.cc/PrW4cfDs/favicon.png" type="image/x-icon">
+
+    <link href="https://rsms.me/inter/inter-ui.css" rel="stylesheet">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+    <link rel="stylesheet" href="/css/default.css" id="theme-color">
+</head>
+<body>
+
+    
+<section class="smart-scroll">
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-md navbar-dark">
+            <a class="navbar-brand heading-black" href="/">
+                Zekais-API
+            </a>
+            <button class="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse"
+                    data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span data-feather="grid"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll d-flex flex-row align-items-center text-primary" href="/price">
+                            <i class="fas fa-tags"></i><em width="18" height="18" class="mr-2"></em>
+                            Pricing
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll d-flex flex-row align-items-center text-primary" href="/changelog">
+                            <i class="fas fa-sync-alt"></i><em width="18" height="18" class="mr-2"></em>
+                            Changelog
+                        </a>
+                    </li>
+                    
+                        <li class="nav-item">
+                            <a class="nav-link page-scroll d-flex flex-row align-items-center text-primary" href="/users/logout">
+                                <i class="fas fa-sign-out-alt"></i><em width="18" height="18" class="mr-2"></em>
+                                Logout
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link page-scroll d-flex flex-row align-items-center text-primary" href="/docs">
+                                <i class="fas fa-chalkboard"></i><em class="mr-2"></em>
+                                Dashboard
+                            </a>
+                        </li>
+                    
+                </ul>
+            </div>
+        </nav>
+    </div>
+</section>
+    <div class="container">
+    <div class="navbaro">
+        <div class="hamburger-menu">
+            <div class="line line-1 text-primary"></div>
+            <div class="line line-2"></div>
+            <div class="line line-3"></div>
+        </div>
+        <ul class="navo-list">
+            <li class="navo-item">
+                <a href="/docs/downloader" class="navo-link"><i class="fas fa-download"></i>
+                    <em class="ml-2"></em>Downloader</a>
+            </li>
+            <li class="navo-item">
+                <a href="/docs/random" class="navo-link"><i class="fas fa-random"></i>
+                    <em class="ml-2"></em>Random</a>
+            </li>
+            <li class="navo-item">
+                <a href="/docs/anime" class="navo-link"><i class="fas fa-cat"></i>
+                <em class="ml-2"></em>Anime/Manga</a>
+            </li>
+            <li class="navo-item">
+                <a href="/docs/film" class="navo-link"><i class="fas fa-film"></i>
+                    <em class="ml-2"></em>Film/Nulis</a>
+            </li>
+            <li class="navo-item">
+                <a href="/docs/search" class="navo-link"><i class="fas fa-search"></i>
+                    <em class="ml-2"></em>Searching/Apk</a>
+            </li>
+            <li class="navo-item">
+                <a href="/docs/fun" class="navo-link"><i class="far fa-smile"></i>
+                <em class="ml-2"></em>Fun/Primbon</a>
+            </li>
+            <li class="navo-item">
+                <a href="/docs/photooxy" class="navo-link"><i class="far fa-image"></i>
+                    <em class="ml-2"></em>Photooxy/Textpro</a>
+            </li>
+            <li class="navo-item">
+                <a href="/docs/other" class="navo-link"><i class="fas fa-align-center"></i>
+                    <em class="ml-2"></em>Other</a>
+            </li>
+            <li class="navo-item">
+                <a href="/docs/game" class="navo-link"><i class="fas fa-gamepad"></i>
+                    <em class="ml-2"></em>Mini Game</a>
+            </li>
+        </ul>
+    </div>
+</div> 
+
+<section class="py-5"></section>
+
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-5">
+                                <div class="icon-big text-center text-primary">
+                                    <i class="far fa-user fa-3x"></i>
+                                </div>
+                            </div>
+                            <div class="col-7">
+                                <p class="card-title text-primary">Total User</p>
+                                <p class="card-text">121 </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-5">
+                                <div class="icon-big text-center text-primary">
+                                    <i class="fas fa-eye fa-3x"></i>
+                                </div>
+                            </div>
+                            <div class="col-7">
+                                <p class="card-title text-primary">Visitor</p>
+                                <p class="card-text">3705 </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-5">
+                                <div class="icon-big text-center text-primary">
+                                    <i class="fas fa-clock fa-3x"></i>
+                                </div>
+                            </div>
+                            <div class="col-7">
+                                <p class="card-title text-primary">Today</p>
+                                <p class="card-text">9571 </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-5">
+                                <div class="icon-big text-center text-primary">
+                                    <i class="fas fa-hourglass-start fa-3x"></i>
+                                </div>
+                            </div>
+                            <div class="col-7">
+                                <p class="card-title text-primary">Request Total</p>
+                                <p class="card-text">42167 </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5 bg-dark" >
+    <div class="container">
+        <center>            
+            
+
+ 
+             
+        </center>
+        <div class="row">
+            <div class="col-md-6 mx-auto text-center">
+                <h2 class="text-white heading-black text-primary">Dashboard</h2>
+                <p class="text-light lead mb-5" style="font-style: italic;">Welcome Zekais-API3</p>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                <div class="card">
+                    <a href="#" class="text-center">
+                        <img class="card-img-top img-raised" style="width: 170px;height: 150px;border-radius: 50%;margin: -30px auto 0;" src="/img/hi.gif" alt="Blog 1">
+                    </a>
+                    <div class="card-body">
+                        <a href="#" class="card-title text-center"><h5>Zekais-API3</h5></a>
+                        <p class="text-muted small-xl text-center mb-2">Status : Free</p>
+                        <p class="card-text">Apikey :
+                            <strong><code class="text-primary">UwCWB5Hq</code></strong>
+                        </p>
+                        <p class="card-text">Limit Today : 97</p>
+                        <p class="card-text">Total Request : 4 </p>
+                        
+                        <div class="text-center"> 
+                            <form action="/users/changekey" method="post">
+                                <div class="form-group">
+                                    <input style="font-family:Arial, FontAwesome" name="newKey" type="text" class="form-control" placeholder="&#xf084;   New Apikey" required>
+                                </div>
+                                <div class="text-center">
+                                    <button type="submit" class="btn btn-primary mb-2"><i class="fas fa-key"></i><em class="ml-2"></em>Change ApiKey</button>
+                                </div>
+                            </form>
+                            
+                                <a class="btn btn-primary mb-2" href="/users/email"><i class="fas fa-envelope"></i><em class="ml-2"></em>Connect Gmail</a> 
+                                <p class="text-muted small-xl">Connect With Gmail to Get More 100 Limit Apikey</p>                            
+                            
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-pencil-ruler"></i>
+                            <em class="ml-2"></em>INFO</h5>
+                        <ul>
+                            <li>Apikey Default 2000 Limit/Hari:<h6 class="text-primary">zekais</h6><p class="text-muted small-xl">(apikey default "zekais" have 2000 Limit/Day)</p></li>
+                            <li>Jangan Spam Request ke Webnya<p class="text-muted small-xl">(Please do not spam requests to this website)</p></li>
+                            <li>Daripada Nembak Mending Langsung Clone Source Code Di Bawah
+                                <p class="text-muted small-xl">(This Website May be Cloned From My Github Repository (See Below))</p></li>
+                            <li>Jika Kamu Tidak Menggunakan Parameter Apikey, Maka akan diarahkan untuk menggunakan apikey default yaitu "zekais"
+                                <p class="text-muted small-xl">(If you don't use the apikey parameter, the default apikey will be used, which is zekais.)</p></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-code"></i>
+                            <em class="ml-2"></em>Source Code</h5>
+                            <p class="card-text">Jangan Lupa Follow & Star Repo Ini</p>
+                            <p class="text-muted small-xl">(Don't forget to follow me and star this repo)</p>
+                            <div class="text-center">
+                                <a class="btn btn-primary mb-2" href="https://github.com/fawwaz37/" target="_blank"><i class="fab fa-github"></i><em class="ml-2"></em>Github</a>
+                                <a class="btn btn-primary mb-2" href="https://github.com/fawwaz37/nodejs-restapi" target="_blank"><i class="fas fa-link"></i><em class="ml-2"></em>Source Code</a>
+                            </div>
+                        <h5 class="card-title"><i class="fas fa-id-card"></i>
+                            <em class="ml-2"></em>Contact Me</h5>
+                            <p class="card-text">Hubungi Saya Melalui</p>
+                            <p class="text-muted small-xl">(You can contact me via)</p>
+                            <div class="text-center">
+                                <a class="btn btn-primary mb-2" href="https://api.whatsapp.com/send/?phone=6287715579966&text&app_absent=0" target="_blank">
+                                    <i class="fab fa-whatsapp"></i><em class="ml-2"></em>WhatsApp</a>
+                            </div>
+                        <h5 class="card-title"><i class="far fa-comments"></i>
+                            <em class="ml-2"></em>Chat Box Online</h5>
+                            <p class="text-muted small-xl">
+                                Please use the Chat Box below if there is an Issue with this Rest-Api or if you have a problem with Zekais
+                            </p>
+                            <div class="text-center">
+                                <script id="cid0020000290543969306" data-cfasync="false" async src="//st.chatango.com/js/gz/emb.js" style="width: 201px;height: 300px;">{"handle":"zekais-api","arch":"js","styles":{"a":"1de9b6","b":100,"c":"000000","d":"000000","k":"1de9b6","l":"1de9b6","m":"1de9b6","p":"10","q":"1de9b6","r":100,"cv":1,"cvfntw":"bold","cvbg":"1de9b6","cvw":201,"cvh":41,"ticker":1}}</script>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mx-auto text-center">
+                <h2 class="text-white heading-black text-primary">Sub-Menu</h2>
+                <p class="text-light lead mb-5" style="font-style: italic;">Isinya Teh Sebagai Berikut..</p>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-sm-3">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h4 class="card-title">Username : Zekais-API3</h4>
+                        <p class="card-text">Apikey :
+                            <strong><code class="text-primary">UwCWB5Hq</code></strong>
+                        </p>
+                        <p class="card-text">Limit Today : 97</p>
+                        <p class="card-text">Total Request : 4</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-body">
+                        <a href="#" class="card-title"><h5>Features</h5></a>
+                        <div class="text-center">
+                            <a class="btn btn-primary mb-2" href="/docs/downloader"><i class="fas fa-download"></i>
+                                <em class="ml-2"></em>Downloader</a>
+                            <a class="btn btn-primary mb-2" href="/docs/random"><i class="fas fa-random"></i>
+                                <em class="ml-2"></em>Random Docs</a>
+                            <a class="btn btn-primary mb-2" href="/docs/anime"><i class="fas fa-cat"></i>
+                                <em class="ml-2"></em>Anime/Manga</a>
+                            <a class="btn btn-primary mb-2" href="/docs/film"><i class="fas fa-film"></i>
+                                <em class="ml-2"></em>Film/Nulis</a>
+                            <a class="btn btn-primary mb-2" href="/docs/search"><i class="fas fa-search"></i>
+                                <em class="ml-2"></em>Searching/Apk</a>
+                            <a class="btn btn-primary mb-2" href="/docs/fun"><i class="far fa-smile"></i>
+                                <em class="ml-2"></em>Fun/Primbon</a>
+                            <a class="btn btn-primary mb-2" href="/docs/photooxy"><i class="far fa-image"></i>
+                                <em class="ml-2"></em>Photooxy/Textpro</a>
+                            <a class="btn btn-primary mb-2" href="/docs/other"><i class="fas fa-align-center"></i>
+                                <em class="ml-2"></em>Other</a>
+                            <a class="btn btn-primary mb-2" href="/docs/game"><i class="fas fa-gamepad"></i>
+                                <em class="ml-2"></em>Mini Game</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8 divider top-divider mx-auto text-center pt-5">
+            <a class="btn btn-primary mb-2" 
+                href="/"><i class="fas fa-home"></i><em class="ml-2"></em>Home
+            </a>
+            <a class="btn btn-primary mb-2" 
+                href="/docs"><i class="fas fa-file-alt"></i><em class="ml-2"></em>Docs
+            </a>
+        </div>
+    </div>
 </section> 
+
+<section class="py-2">
+    <div class="col-12 text-muted text-center">
+        <a href="https://github.com/fawwaz37" target="_blank">2021 Zekais - All Rights Reserved</a>
+    </div>
+</section>
+
+<div class="scroll-top">
+    <i class="fa fa-angle-up" aria-hidden="true"></i>
+</div>
+
+<section>
+<div class="container">
+    <div class="switcher-wrap">
+        <div class="switcher-trigger">
+            <span class="fa fa-gear"></span>
+        </div>
+        <div class="color-switcher">
+            <h6>Color Switcher</h6>
+            <ul class="mt-3 clearfix">
+                <li class="bg-teal active" data-color="default" title="Default Teal"></li>
+                <li class="bg-purple" data-color="purple" title="Purple"></li>
+                <li class="bg-blue" data-color="blue" title="Blue"></li>
+                <li class="bg-red" data-color="red" title="Red"></li>
+                <li class="bg-green" data-color="green" title="Green"></li>
+                <li class="bg-indigo" data-color="indigo" title="Indigo"></li>
+                <li class="bg-orange" data-color="orange" title="Orange"></li>
+                <li class="bg-cyan" data-color="cyan" title="Cyan"></li>
+                <li class="bg-yellow" data-color="yellow" title="Yellow"></li>
+                <li class="bg-pink" data-color="pink" title="Pink"></li>
+            </ul>
+            <p>You Can Switch Theme Color</p>
+        </div>
+    </div>
+</div>
+</section>
+<script src="/script.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.7.3/feather.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+<script src="/js/scripts.js"></script>
+</body>
+</html>

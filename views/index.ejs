@@ -1,86 +1,276 @@
-<section id="home" data-parallax="scroll" data-image-src="images/bgd.jpg">
-    <div class="overlay"></div>
-    <div class="home-content">        
-        <div class="row contents">                     
-            <div class="home-content-left">
-                <h3>Hello User,</h3>
-                <h1>
-                    Welcome To Zekais-Api
-                </h1>
-                <div class="buttons" data-aos="fade-up">
-                    <a href="/docs" class="button stroke">
-                        <span><i class="fas fa-folder"></i></span>
-                        Open Docs
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Zekais-API</title>
+    <meta name="description"content="Zekais"/>
+    <link rel="icon" href="https://i.postimg.cc/PrW4cfDs/favicon.png" type="image/x-icon">
+
+    <link href="https://rsms.me/inter/inter-ui.css" rel="stylesheet">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+    <link rel="stylesheet" href="/css/default.css" id="theme-color">
+</head>
+<body>
+
+    
+<section class="smart-scroll">
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-md navbar-dark">
+            <a class="navbar-brand heading-black" href="/">
+                Zekais-API
+            </a>
+            <button class="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse"
+                    data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span data-feather="grid"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll d-flex flex-row align-items-center text-primary" href="/price">
+                            <i class="fas fa-tags"></i><em width="18" height="18" class="mr-2"></em>
+                            Pricing
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll d-flex flex-row align-items-center text-primary" href="/changelog">
+                            <i class="fas fa-sync-alt"></i><em width="18" height="18" class="mr-2"></em>
+                            Changelog
+                        </a>
+                    </li>
+                    
+                        <li class="nav-item">
+                            <a class="nav-link page-scroll d-flex flex-row align-items-center text-primary" href="/users/logout">
+                                <i class="fas fa-sign-out-alt"></i><em width="18" height="18" class="mr-2"></em>
+                                Logout
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link page-scroll d-flex flex-row align-items-center text-primary" href="/docs">
+                                <i class="fas fa-chalkboard"></i><em class="mr-2"></em>
+                                Dashboard
+                            </a>
+                        </li>
+                    
+                </ul>
+            </div>
+        </nav>
+    </div>
+</section>
+    
+    <div class="container">
+    <div class="navbaro">
+        <div class="hamburger-menu">
+            <div class="line line-1 text-primary"></div>
+            <div class="line line-2"></div>
+            <div class="line line-3"></div>
+        </div>
+        <ul class="navo-list">
+            <li class="navo-item">
+                <a href="/docs/downloader" class="navo-link"><i class="fas fa-download"></i>
+                    <em class="ml-2"></em>Downloader</a>
+            </li>
+            <li class="navo-item">
+                <a href="/docs/random" class="navo-link"><i class="fas fa-random"></i>
+                    <em class="ml-2"></em>Random</a>
+            </li>
+            <li class="navo-item">
+                <a href="/docs/anime" class="navo-link"><i class="fas fa-cat"></i>
+                <em class="ml-2"></em>Anime/Manga</a>
+            </li>
+            <li class="navo-item">
+                <a href="/docs/film" class="navo-link"><i class="fas fa-film"></i>
+                    <em class="ml-2"></em>Film/Nulis</a>
+            </li>
+            <li class="navo-item">
+                <a href="/docs/search" class="navo-link"><i class="fas fa-search"></i>
+                    <em class="ml-2"></em>Searching/Apk</a>
+            </li>
+            <li class="navo-item">
+                <a href="/docs/fun" class="navo-link"><i class="far fa-smile"></i>
+                <em class="ml-2"></em>Fun/Primbon</a>
+            </li>
+            <li class="navo-item">
+                <a href="/docs/photooxy" class="navo-link"><i class="far fa-image"></i>
+                    <em class="ml-2"></em>Photooxy/Textpro</a>
+            </li>
+            <li class="navo-item">
+                <a href="/docs/other" class="navo-link"><i class="fas fa-align-center"></i>
+                    <em class="ml-2"></em>Other</a>
+            </li>
+            <li class="navo-item">
+                <a href="/docs/game" class="navo-link"><i class="fas fa-gamepad"></i>
+                    <em class="ml-2"></em>Mini Game</a>
+            </li>
+        </ul>
+    </div>
+</div> 
+
+
+<section class="py-7 py-md-0 bg-hero" id="home">
+    <div class="container">
+        <div class="row vh-md-100">
+            <div class="col-md-8 col-sm-10 col-12 mx-auto my-auto text-center">
+                <h1 class="heading-black text-capitalize text-primary">Welcome to Zekais-API</h1>
+                <p class="lead py-3">Monggo Mas/Mba..</p>
+                <div class="text-center">
+                    <a class="btn btn-primary mb-2  d-inline-flex flex-row align-items-center" 
+                    href="https://github.com/fawwaz37/nodejs-restapi" target="__blank"><i class="fas fa-code"></i><em class="ml-2"></em>Source Code</a>
+                    <a class="btn btn-primary mb-2  d-inline-flex flex-row align-items-center" 
+                        href="/docs">See Docs<em class="ml-2"></em><i class="fas fa-arrow-right"></i>
                     </a>
-                    <a href="https://github.com/fawwaz37/nodejs-restapi" class="button stroke" target="__blank">
-                        <span><i class="fas fa-code"></i></span>
-                         Source Code
-                    </a>
-                </div>                                         
+                </div>
             </div>
         </div>
-    </div> 
-
-    <ul class="home-social-list">
-        <li>
-            <a href="https://api.whatsapp.com/send/?phone=6287715579966&text&app_absent=0" target="__blank"><i class="fab fa-whatsapp fa-lg"></i></a>
-        </li>
-        <li>
-            <a href="https://github.com/fawwaz37" target="__blank"><i class="fab fa-github fa-lg"></i></a>
-        </li>
-        <li>
-            <a href="http://zekais-restapi.herokuapp.com/" target="__blank"><i class="fas fa-link fa-lg"></i></a>
-        </li>
-    </ul>
-    <div class="home-scrolldown">
-        <a href="#testimonials" class="scroll-icon smoothscroll">
-            <span>Scroll</span>
-            <i class="icon-arrow-right" aria-hidden="true"></i>
-        </a>
-    </div>
-</section> 
-
-<section id="testimonials">
-    <div class="row">
-        <div class="col-twelve">
-            <h1 class="intro-header" data-aos="fade-up">About Me</h1>
-        </div>   		
-    </div>   	
-    <div class="row owl-wrap">
-        <div id="testimonial-slider"  data-aos="fade-up">
-            <div class="slides owl-carousel">
-                <div>
-                    <p>
-                        Hello, I'm Zekais. For now I spend more time to explore about backend development especially using Node JS and MongoDb.
-                        Contact Me Via <a href="https://api.whatsapp.com/send/?phone=6287715579966&text&app_absent=0" target="__blank">Whatsapp</a></p> 
-                    <div class="testimonial-author">
-                            <img src="images/hi.gif" alt="Author image">
-                            <div class="author-info">
-                                Zekais
-                                <span>Owner, Zekais-Api</span>
-                            </div>
-                    </div>                 
-                </div> 
-            </div>
-        </div>          
     </div>
 </section>
 
-<section id="download">
-    <div class="row">
-        <div class="col-full">
-            <h1 class="intro-header"  data-aos="fade-up">Clone This API Now!</h1>
-            <p class="lead" data-aos="fade-up">
-                This project is open source, and you can clone it using the link below.<br>
-                If you have any problems with the installation, please contact Zekais via 
-                <a href="https://api.whatsapp.com/send/?phone=6287715579966&text&app_absent=0" target="__blank">Whatsapp</a>
-            </p>
-            <div class="primary" data-aos="fade-up">
-                <a class="button button-default" href="https://github.com/fawwaz37/nodejs-restapi" target="__blank">
-                    <span aria-hidden="true"><i class="fas fa-code"></i></span>
-                 Source Code</a>
+<section class="py-5 bg-dark section-angle top-left bottom-left">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mx-auto text-center">
+                <h2 class="heading-black text-primary">Projects</h2>
+                <p class="text-muted lead" style="font-style: italic;">If we never try, we will never know</p>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-md-4">
+                <div class="card">
+                    <a href="https://zekais-todo.herokuapp.com/" target="_blank">
+                        <img class="card-img-top img-raised" src="https://i.postimg.cc/X7CqLXT3/todo.png" alt="Blog 1">
+                    </a>
+                    <div class="card-body">
+                        <a href="https://zekais-todo.herokuapp.com/" class="card-title mb-2" target="_blank"><h5><div class="text-primary">To-Do List Website</div></h5></a>
+                        <p class="text-muted small-xl mb-2">Jul 25, 2021</p>
+                        <p class="card-text">Todo App With CRUD System, Built Using Node Js, Express JS, and MongoDb</p>
+                        <div class="text-center">
+                            <a class="btn btn-primary mb-2" href="https://github.com/fawwaz37/todo-express-mongodb" target="_blank"><i class="fab fa-github"></i><em class="ml-2"></em>Github</a>
+                            <a class="btn btn-primary mb-2" href="https://zekais-todo.herokuapp.com/" target="_blank"><i class="fas fa-link"></i><em class="ml-2"></em>Demo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <a href="https://zekais-restapi.herokuapp.com/" target="_blank">
+                        <img style="height: 170px;" class="card-img-top img-raised" src="https://i.postimg.cc/d1J2tZLF/landingpage.png" alt="Blog 2">
+                    </a>
+                    <div class="card-body">
+                        <a href="https://zekais-restapi.herokuapp.com/" class="card-title mb-2" target="_blank"><h5><div class="text-primary">Rest API</div></h5></a>
+                        <p class="text-muted small-xl mb-2">Aug 4, 2021</p>
+                        <p class="card-text">Simple Rest Api With Login System, Built Using Node Js, Express JS, and MongoDb</p>
+                        <div class="text-center">
+                            <a class="btn btn-primary mb-2" href="https://github.com/fawwaz37/nodejs-restapi" target="_blank"><i class="fab fa-github"></i><em class="ml-2"></em>Github</a>
+                            <a class="btn btn-primary mb-2" href="https://zekais-restapi.herokuapp.com/" target="_blank"><i class="fas fa-link"></i><em class="ml-2"></em>Demo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <a href="https://github.com/fawwaz37" target="_blank">
+                        <img style="height: 170px;" class="card-img-top img-raised" src="https://i.postimg.cc/7Z4zTgbj/quiz.jpg" alt="Blog 3">
+                    </a>
+                    <div class="card-body">
+                        <a href="https://github.com/fawwaz37" target="_blank" class="card-title mb-2"><h5><div class="text-primary">Quiz Website</div></h5></a>
+                        <p class="text-muted small-xl mb-2">Aug 5, 2021</p>
+                        <p class="card-text">Quiz Website With Login System, Built Using Node Js, Express JS, and MongoDb</p>
+                        <div class="text-center">
+                            <a class="btn btn-primary mb-2" href="https://github.com/fawwaz37" target="_blank"><i class="fab fa-github"></i><em class="ml-2"></em>Github</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+</section>
 
-</section>   
+<footer class="py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-5 mr-auto">
+                <h5>About</h5>
+                <p class="text-muted">Hello, I'm Zekais. For now I spend more time to explore about backend development especially using Node JS and MongoDb.
+                    You can reach me out via socials below:
+                </p>
+                <ul class="list-inline social social-sm">
+                    <li class="list-inline-item">
+                        <a href="https://api.whatsapp.com/send/?phone=6287715579966&text&app_absent=0" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-2">
+                <h5>Projects</h5>
+                <ul class="list-unstyled">
+                    <li><a href="https://zekais-todo.herokuapp.com/" target="_blank">Todo List</a></li>
+                    <li><a href="https://zekais-restapi.herokuapp.com/" target="_blank">Rest Api</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-2">
+                <h5>Donation</h5>
+                <ul class="list-unstyled">
+                    <li><a href="https://saweria.co/zekais" target="_blank">Saweria</a></li>
+                    <li><a href="http://paypal.me/fawwazarfiqi" target="_blank">Paypal</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-2">
+                <h5>Help</h5>
+                <ul class="list-unstyled">
+                    <li><a href="/projects">Projects</a></li>
+                    <li><a href="/users/login">Log in</a></li>
+                    <li><a href="/users/register">Register</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 text-muted text-center">
+        <a href="https://github.com/fawwaz37" target="_blank">2021 Zekais - All Rights Reserved</a>
+    </div>
+</footer>
+
+<div class="scroll-top">
+    <i class="fa fa-angle-up" aria-hidden="true"></i>
+</div>
+
+<section>
+<div class="container">
+    <div class="switcher-wrap">
+        <div class="switcher-trigger">
+            <span class="fa fa-gear"></span>
+        </div>
+        <div class="color-switcher">
+            <h6>Color Switcher</h6>
+            <ul class="mt-3 clearfix">
+                <li class="bg-teal active" data-color="default" title="Default Teal"></li>
+                <li class="bg-purple" data-color="purple" title="Purple"></li>
+                <li class="bg-blue" data-color="blue" title="Blue"></li>
+                <li class="bg-red" data-color="red" title="Red"></li>
+                <li class="bg-green" data-color="green" title="Green"></li>
+                <li class="bg-indigo" data-color="indigo" title="Indigo"></li>
+                <li class="bg-orange" data-color="orange" title="Orange"></li>
+                <li class="bg-cyan" data-color="cyan" title="Cyan"></li>
+                <li class="bg-yellow" data-color="yellow" title="Yellow"></li>
+                <li class="bg-pink" data-color="pink" title="Pink"></li>
+            </ul>
+            <p>You Can Switch Theme Color</p>
+        </div>
+    </div>
+</div>
+</section>
+<script src="/script.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.7.3/feather.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+<script src="/js/scripts.js"></script>
+</body>
+</html>
